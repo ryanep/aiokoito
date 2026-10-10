@@ -26,12 +26,10 @@ Koito endpoint. It makes GET requests only.
 
 ## Installation
 
-The package has not yet been published to PyPI. Install from source:
+Install from PyPI:
 
 ```bash
-git clone https://github.com/ryanep/aiokoito.git
-cd aiokoito
-python -m pip install .
+python -m pip install aiokoito
 ```
 
 ## Quick start
@@ -198,10 +196,12 @@ pending sibling requests.
 
 ## Development
 
-From a source checkout, install the package and development tools into a virtual
-environment:
+Clone the repository and install the package and development tools into a
+virtual environment:
 
 ```bash
+git clone https://github.com/ryanep/aiokoito.git
+cd aiokoito
 python -m venv .venv
 source .venv/bin/activate
 python -m pip install -e . pytest pytest-asyncio build
