@@ -1,0 +1,25 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "aiokoito"
+version = "0.1.0"
+description = "Asynchronous read-only client for Koito listening statistics"
+readme = "readme.md"
+requires-python = ">=3.12"
+license = "MIT"
+license-files = ["license"]
+authors = [{name = "Ryan"}]
+dependencies = ["aiohttp>=3.11,<4"]
+classifiers = ["Development Status :: 3 - Alpha", "Framework :: AsyncIO", "Programming Language :: Python :: 3", "Typing :: Typed"]
+
+[project.urls]
+Source = "https://github.com/ryanep/aiokoito"
+Issues = "https://github.com/ryanep/aiokoito/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/aiokoito"]
+
+[tool.hatch.build.targets.sdist]
+include = ["src", "tests", "readme.md", "license", "pyproject.toml"]
